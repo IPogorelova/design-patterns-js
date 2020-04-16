@@ -48,7 +48,8 @@ class CodeBuilder
         return this.classExample.toString();
     }
 
-    build() {
+    build()
+    {
         return this.classExample;
     }
 }
