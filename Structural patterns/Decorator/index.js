@@ -31,7 +31,6 @@ class Dragon extends Bird
     super(age);
   }
 
-  // todo: API members
   crawl() {
     return this.age > 1 ? 'crawling' : 'too young';
   }
