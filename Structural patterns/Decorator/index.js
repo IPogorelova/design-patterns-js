@@ -24,14 +24,22 @@ class Lizard
   }
 }
 
-class Dragon extends Bird
+class Dragon
 {
   constructor(age=0)
   {
-    super(age);
+    this._bird = new Bird();
+    this._lizard = new Lizard();
+    this._age = age;
   }
 
-  crawl() {
-    return this.age > 1 ? 'crawling' : 'too young';
+  set age(value) {
+    this._age = this._bird.age
+      = this._lizard.age = value;
   }
+
+  get age() { return this._age; }
+
+  fly() { return this._bird.fly(); }
+  crawl() { return this._lizard.crawl(); }
 }
